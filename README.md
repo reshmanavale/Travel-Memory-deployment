@@ -154,6 +154,9 @@ sudo systemctl restart nginx
    - **Frontend Target Group**: Port 80
 4. Register backend and frontend instances.
 
+   <img width="938" alt="image" src="https://github.com/user-attachments/assets/6503009c-4f0d-4d10-9762-6ce951db8320" />
+
+
 ### Create an Application Load Balancer
 1. Go to **Load Balancers** → Click **Create Load Balancer**.
 2. Choose **Application Load Balancer**.
