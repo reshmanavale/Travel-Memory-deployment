@@ -166,11 +166,42 @@ sudo systemctl restart nginx
 4. Assign **Instances** to respective target groups.
 5. Create and test the load balancer.
 
-## 5. Verify Deployment
-- Visit `<Load Balancer DNS>` to check the frontend.
-- API should be accessible via `<Load Balancer DNS>/api/trip`.
+## 5. Domain Setup with Cloudflare
+
+### Add your domain to Cloudflare
+
+1. Sign in to your [Cloudflare dashboard](https://dash.cloudflare.com/)
+2. Click **Add a Site** and enter your domain name
+3. Follow the setup instructions to update your domain’s nameservers to Cloudflare
+
+### Create a CNAME record pointing to the load balancer endpoint
+
+1. Go to **DNS Settings** in Cloudflare
+2. Click **Add Record** and enter:
+   - **Type:** CNAME
+   - **Name:** www
+   - **Target:** `[your-load-balancer-dns]`
+   - **TTL:** Auto
+
+### Create an A record for the root domain
+
+1. Click **Add Record** and enter:
+   - **Type:** A
+   - **Name:** @
+   - **IPv4 Address:** `[your-EC2-instance-IP]`
+   - **TTL:** Auto
+
+### Enable SSL/TLS Settings
+
+1. Navigate to **SSL/TLS** → Set it to **Full (Strict)** for better security
+
+### Save Changes and Propagate DNS
+
+1. Wait for DNS propagation (can take a few minutes to a few hours)
+2. Verify by accessing your domain in a browser
 
 ## 6. Push to GitHub
+
 ```sh
 git add .
 git commit -m "Added deployment guide"
@@ -178,4 +209,5 @@ git push origin main
 ```
 
 Your TravelMemory app is now fully deployed and scalable! 🚀
+
 
