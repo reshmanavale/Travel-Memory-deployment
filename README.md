@@ -200,6 +200,11 @@ sudo systemctl restart nginx
 1. Wait for DNS propagation (can take a few minutes to a few hours)
 2. Verify by accessing your domain in a browser
 
+### Architecture Diagram
+
+<img width="648" alt="image" src="https://github.com/user-attachments/assets/c20b0caf-64e7-4054-9666-af90f1f2b4d7" />
+
+
 ## 6. Push to GitHub
 
 ```sh
