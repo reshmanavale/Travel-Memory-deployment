@@ -38,6 +38,7 @@ Create a `.env` file and add:
 PORT=3001
 MONGO_URI=mongodb+srv://<your-mongo-uri>
 ```
+<img width="779" alt="sercurity_group" src="https://github.com/user-attachments/assets/f97b3ab4-f008-46d7-a609-0b39c8ee0845" />
 
 ### Start Backend Server
 ```sh
@@ -71,6 +72,12 @@ server {
     }
 }
 ```
+<img width="659" alt="configured_reverce_proxy" src="https://github.com/user-attachments/assets/7592ad8f-978b-46df-82e5-67b76ab9c04d" />
+
+<img width="799" alt="connecting to backend server" src="https://github.com/user-attachments/assets/d5113fd2-aad3-4bf6-9a89-d893d306c798" />
+
+
+<img width="520" alt="backend_server_running" src="https://github.com/user-attachments/assets/92806eef-1890-4048-9de5-d009662e9b33" />
 
 3. Enable Configuration & Restart Nginx:
 ```sh
@@ -128,6 +135,9 @@ server {
 sudo ln -s /etc/nginx/sites-available/frontend /etc/nginx/sites-enabled/
 sudo systemctl restart nginx
 ```
+<img width="456" alt="successfully_started_server" src="https://github.com/user-attachments/assets/163cd6b1-651f-4a6b-9862-dfa9761566a2" />
+
+<img width="599" alt="frontend server after nginx" src="https://github.com/user-attachments/assets/b77380d3-aa7f-476c-83dc-7d973867fa37" />
 
 ## 4. Scaling the Application
 
