@@ -11,6 +11,7 @@ sudo apt install -y nodejs
 node -v  # Verify installation
 npm -v   # Verify npm installation
 ```
+<img width="881" alt="installed nodejs on backend" src="https://github.com/user-attachments/assets/75fcd43e-bfaa-49e5-bcd4-61dddd42f836" />
 
 ## 2. Backend Configuration
 
@@ -20,12 +21,15 @@ npm -v   # Verify npm installation
 git clone <your-repo-url>
 cd TravelMemory/backend
 ```
+<img width="696" alt="git clone to frontend server" src="https://github.com/user-attachments/assets/36a17943-2a6f-4aab-9495-736615823faa" />
 
 ### Install Dependencies
 
 ```sh
 npm install
 ```
+<img width="905" alt="installed npm on backend server" src="https://github.com/user-attachments/assets/86b7f672-faa4-4c50-914c-a58fe9cbb3d6" />
+
 
 ### Configure Environment Variables
 
@@ -89,6 +93,7 @@ Edit `src/config/urls.js` and replace `API_BASE_URL` with the backend URL:
 ```js
 export const API_BASE_URL = 'http://<your-backend-public-ip>/api';
 ```
+<img width="663" alt="added_ip_to_frontend" src="https://github.com/user-attachments/assets/29207cee-91e9-4563-90cb-ed68eeebef9d" />
 
 ### Build and Serve Frontend
 ```sh
